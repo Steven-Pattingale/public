@@ -3745,7 +3745,7 @@ if ($manufacturer -like "*Asus*")
 ############################################################################################################
 
 #McAfee
-
+<# RT: McAfee removal disabled - handled by our AppX-only Win32 app.
 write-output "Detecting McAfee"
 $mcafeeinstalled = "false"
 $InstalledSoftware = Get-ChildItem "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall"
@@ -3878,7 +3878,7 @@ if ($mcafeeinstalled -eq "true")
     { Remove-Item -Path "${env:ProgramFiles(x86)}\McAfee" -Recurse -Force
     }
 }
-
+#>
 
 ##Look for anything else
 
